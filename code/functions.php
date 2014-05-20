@@ -28,7 +28,7 @@ if (($option == 'com_redshop' && $view == 'product') || ($option == 'com_redshop
 		// Replace stat images
 		$(".product_detail_box").find("img").each(function(){
 			var src = $(this).attr("src");
-			var a = src.replace("administrator/components/com_redshop/assets/images/star_rating", "templates/redbakery/images/star_rating");
+			var a = src.replace("administrator/components/com_redshop/assets/images/star_rating", "templates/redgadgets/images/star_rating");
 			$(this).attr("src", a);
 		});
 	});

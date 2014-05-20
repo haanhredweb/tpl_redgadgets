@@ -18,7 +18,7 @@ defined('_JEXEC') or die;
 		</div>
 		<div class="itemtext">
 			<?php echo JHTML::_('string.truncate', ($item->introtext), 80, true, false); ?>
-			<a href="<?php echo $item->link; ?>"><?php echo JText::_('TPL_REDBAKERY_READ_MORE'); ?></a>
+			<a href="<?php echo $item->link; ?>"><?php echo JText::_('TPL_REDGADGETS_READ_MORE'); ?></a>
 		</div>
 	</li>
 <?php endforeach; ?>

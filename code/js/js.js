@@ -111,14 +111,14 @@ jQuery(document).ready(function($){
 	// Replace update image
 	$(".tdupdatecart").find("img").each(function(){
 		var src = $(this).attr("src");
-		var a = src.replace("/components/com_redshop/assets/images/update.jpg", "/templates/redbakery/images/com_redshop/update.png");
+		var a = src.replace("/components/com_redshop/assets/images/update.jpg", "/templates/redgadgets/images/com_redshop/update.png");
 		$(this).attr("src", a);
 	});
 
 	// Replace delete image
 	$(".tdremove_product, .remove_compare").find("img").each(function(){
 		var src = $(this).attr("src");
-		var a = src.replace("/components/com_redshop/assets/images/delete.png", "/templates/redbakery/images/com_redshop/close.png");
+		var a = src.replace("/components/com_redshop/assets/images/delete.png", "/templates/redgadgets/images/com_redshop/close.png");
 		$(this).attr("src", a);
 	});
 

@@ -114,7 +114,7 @@ elseif (isset($compare['idx']) && $compare['idx'] > 1)
 		$link        = JRoute::_('index.php?option=com_redshop&view=product&pid=' . $product->product_id . '&Itemid=' . $this->itemId);
 		$link_remove = JRoute::_('index.php?option=com_redshop&view=product&task=removecompare&layout=compare&pid=' . $product->product_id . '&Itemid=' . $this->itemId);
 
-		$remove = "<a href='" . $link_remove . "'>" . JText::_('TPL_REDBAKERY_REMOVE_PRODUCT_FROM_COMPARE_LIST') . "</a>";
+		$remove = "<a href='" . $link_remove . "'>" . JText::_('TPL_REDGADGETS_REMOVE_PRODUCT_FROM_COMPARE_LIST') . "</a>";
 
 		$thumbUrl = RedShopHelperImages::getImagePath(
 							$product->product_full_image,

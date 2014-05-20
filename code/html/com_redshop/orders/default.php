@@ -49,17 +49,17 @@ if ($this->params->get('show_page_heading', 1))
 	<div class="accountbar">
 		<div class="step1">
 			<a href="<?php echo JRoute::_("index.php?option=com_redshop&view=account&Itemid=" . $Itemid) ?>">
-				<?php echo JText::_('TPL_REDBAKERY_MY_ACCOUNT');?>
+				<?php echo JText::_('TPL_REDGADGETS_MY_ACCOUNT');?>
 			</a>
 		</div>
 		<div class="step2">
 			<a href="<?php echo JRoute::_("index.php?option=com_redshop&view=account_shipto&Itemid=" . $Itemid) ?>">
-				<?php echo JText::_('TPL_REDBAKERY_SHIPPING');?>
+				<?php echo JText::_('TPL_REDGADGETS_SHIPPING');?>
 			</a>
 		</div>
 		<div class="step3 active">
 			<a href="<?php echo JRoute::_("index.php?option=com_redshop&view=orders&Itemid=" . $Itemid) ?>">
-				<?php echo JText::_('TPL_REDBAKERY_MY_ORDERS');?>
+				<?php echo JText::_('TPL_REDGADGETS_MY_ORDERS');?>
 			</a>
 		</div>
 	</div>

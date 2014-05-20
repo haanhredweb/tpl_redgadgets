@@ -33,7 +33,7 @@ $this->direction = $doc->direction;
 		<div id="errorboxoutline">
 			<div id="errorboxheader">
 				<div class="div404"><?php echo $this->error->getCode(); ?></div>
-				<div class="oops"><?php echo JText::_('TPL_REDBAKERY_FILE_NOT_FOUND'); ?></div>
+				<div class="oops"><?php echo JText::_('TPL_REDGADGETS_FILE_NOT_FOUND'); ?></div>
 			</div>
 			<div id="errorboxbody">
 

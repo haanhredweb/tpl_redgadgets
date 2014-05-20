@@ -48,7 +48,7 @@ $profilelink = 'index.php?option=com_redshop&view=account&Itemid=' . $profileIte
 	} endif; ?>
 	<div class="logout-button">
 		<div class="logout-button-inner">
-			<div class="profile"><a href="<?php echo $profilelink  ?>"><?php echo JText::_('TPL_REDBAKERY_PROFILE'); ?></a></div>
+			<div class="profile"><a href="<?php echo $profilelink  ?>"><?php echo JText::_('TPL_REDGADGETS_PROFILE'); ?></a></div>
 			<div class="logout">
 				<input type="submit" name="Submit" value="<?php echo JText::_('JLOGOUT'); ?>" />
 				<input type="hidden" name="option" value="com_users" />

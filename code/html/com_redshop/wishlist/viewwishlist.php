@@ -146,7 +146,7 @@ else
 		$wish_products = $this->wish_products;
 
 		// Send mail link
-		echo "<p class='redcolor'>". JText::_('TPL_REDBAKERY_YOURS_WISHLISTS') . "</p>";
+		echo "<p class='redcolor'>". JText::_('TPL_REDGADGETS_YOURS_WISHLISTS') . "</p>";
 		echo "<table class='table table-hover table-responsive'>";
 
 		for ($j = 0; $j < count($wishlists); $j++)

@@ -182,7 +182,7 @@ for ($i = 0; $i < count($rows); $i++)
 						echo "<div class='mod_redshop_products_price'>" . $producthelper->getProductFormattedPrice($product_price) . "</div>";
 					}
 
-					echo "<div class='mod_redshop_products_conner'>" . JText::_('TPL_REDBAKERY_SALE') . "</div>";
+					echo "<div class='mod_redshop_products_conner'>" . JText::_('TPL_REDGADGETS_SALE') . "</div>";
 				}
 			}
 
