@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ==================================================================    -->
+<!-- redCOMPONENT Template Framework copier                                -->
+<!-- This PHING build file copies the current extension files form repo    -->
+<!-- ==================================================================    -->
+<project name="redComponent" default="site" basedir=".">
+	<!-- Do initialization stuff -->
+	<property
+			name="extension"
+			value="${tpl.name}"
+			override="true" />
+
+	<property
+			name="version"
+			value="${tpl.version}"
+			override="true" />
+
+	<target name="prepare" >
+		<property file="build.properties" override="true"/>
+		<if>
+			<equals arg1="${extension}" arg2="" />
+			<then>
+				<fail message="Extension not specified, use -Dextension=EXTENSION" />
+			</then>
+		</if>
+	</target>
+
+	<property name="src" value="./code" />
+
+	<target name="site" description="Copies files to a existing joomla site" depends="prepare">
+
+	   <php expression="strtolower(${tpl.name})" returnProperty="nameLcwords"/>
+		<php expression="strtoupper(${tpl.name})" returnProperty="nameUcwords"/>
+
+		<filterchain id="file">
+			<replaceregexp>
+				<regexp pattern="%%version%%" replace="${version}" ignoreCase="true" />
+				<regexp pattern="%%lwname%%" replace="${nameLcwords}" ignoreCase="true" />
+				<regexp pattern="%%UPNAME%%" replace="${nameUcwords}" ignoreCase="true" />
+				<regexp pattern="%%extention%%" replace="${extension}" ignoreCase="true" />
+			</replaceregexp>
+		</filterchain>
+
+		<!-- Check if the target folder exists. If not, create it -->
+		<if>
+			<available file="${www.dir}/templates/${nameLcwords}" type="dir" />
+			<then>
+				<echo msg="Removing old ${www.dir}/templates/${nameLcwords}" />
+				<delete dir="${www.dir}/templates/${nameLcwords}" />
+			</then>
+		</if>
+
+		<!-- Component -->
+		<echo message="Copying template..." />
+		<copy todir="${www.dir}/templates/${nameLcwords}" overwrite="true">
+			<filterchain refid="file" />
+			<fileset dir="${src}" />
+		</copy>
+
+		<!-- Languages -->
+		<copy file="${src}/language/en-GB/en-GB.tpl_${nameLcwords}.ini" tofile="${www.dir}/language/en-GB/en-GB.tpl_${nameLcwords}.ini" overwrite="true" >
+			<filterchain refid="file" />
+		</copy>
+		<copy file="${src}/language/en-GB/en-GB.tpl_${nameLcwords}.sys.ini" tofile="${www.dir}/language/en-GB/en-GB.tpl_${nameLcwords}.sys.ini" overwrite="true">
+			<filterchain refid="file" />
+		</copy>
+
+		<exec command="uglifyjs js/js.js > ${www.dir}/templates/${nameLcwords}/js/js.js" logoutput="true" dir="${src}" />
+		<exec command="uglifyjs wright/js/stickyfooter.js > ${www.dir}/templates/${nameLcwords}/wright/js/stickyfooter.js" logoutput="true" dir="${src}" />
+		<exec command="uglifyjs wright/js/utils.js > ${www.dir}/templates/${nameLcwords}/wright/js/utils.js" logoutput="true" dir="${src}" />
+
+	</target>
+</project>
