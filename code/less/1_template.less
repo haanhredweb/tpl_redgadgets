@@ -218,7 +218,7 @@ h2, h3
 					background: transparent;
 					border: 0px;
 					box-shadow: none;
-					color: @link-color;
+					color: #FFF;
 				}
 
 				.select2-focusser
@@ -560,7 +560,7 @@ h2, h3
 		padding-right: 0px;
 		.search, .product_search
 		{
-			padding-top: 3px;
+			padding-top: 2px;
 			padding-left: 6px;
 			label
 			{
@@ -591,7 +591,7 @@ h2, h3
 			{
 				position: absolute;
 				right: 0px;
-				top: 3px;
+				top: 2px;
 				height: 50px;
 				width: 50px;
 				padding: 0px;
@@ -611,7 +611,7 @@ h2, h3
 	.feature, .sale
 	{
 		border: 1px solid #c2c2c2;height: 50px;
-		h3{padding-left: 19px;padding-top: 5px;/*height: 50px;*/margin-top:0px;margin-bottom: 0px;
+		h3{margin-left: 19px;padding-top: 5px;/*height: 50px;*/margin-top:0px;margin-bottom: 0px;float:left;border-top: 5px solid #287ab4;
 }
 		.mod_redshop_products_wrapper
 		{
@@ -629,7 +629,7 @@ h2, h3
 					height: auto;
 					.mod_redshop_price
 					{
-								height:168px ;
+								height:190px ;
 								border-left: 1px solid #2979b4;
 								border-right:1px solid #2979b4;
 								border-bottom:1px solid #2979b4;
@@ -840,6 +840,8 @@ h2, h3
 						width: 66%;
 						margin-top: 10%;
 						color: #FFFFFF;
+						text-transform: uppercase;
+						font-family: @headings-font-family;
 					}
 				}
 			}
@@ -941,10 +943,10 @@ h2, h3
 	background: url("../images/slide-top-menu.png") 2px 0px no-repeat;
 	height: 50px;
 	position: absolute;
-	top: -42px !important;
+	top: 0px !important;
 	width: 50px;
 	cursor: pointer;
-	right: 59px;
+	right: 50px;
 }
 
 .nbs-flexisel-nav-right
@@ -955,7 +957,7 @@ h2, h3
 	background: url("../images/slide-top-menu.png") -47px 0px no-repeat;
 	height: 50px;
 	position: absolute;
-	top: -42px !important;
+	top: 0px !important;
 	width: 50px;
 	cursor: pointer;
 	right: 0px;
@@ -1172,6 +1174,15 @@ h2, h3
     			float: left;padding-left:10px;padding-top:20px;text-transform: uppercase;
     		}
 		}
+	.custom.free_shipping a
+		{
+			font-family: @headings-font-family;
+			text-transform: uppercase;
+			padding: 5px;
+			border: 1px solid #FFF;
+			color: #FFF;
+			margin-left:15px;
+		}
 	}
 
 	.footer-bottom
@@ -1213,7 +1224,7 @@ h2, h3
 	{
 		background-color: #555;
 		border-top: 2px solid #FFF;
-		.custom-copyright{padding: 13px 0 13px 0;}
+		.custom-copyright{padding: 10px 0 10px 0;font-family: @headings-font-family;}
 
 	}
 	.module
@@ -1276,9 +1287,8 @@ h2, h3
 
 .breadcrumbs
 {
-	font-family: @headings-font-family;
+	font-family: @font-family-base ;
 	.fontsize(18);
-
 	.pathway
 	{
 		color: @headings-color;
@@ -1287,7 +1297,7 @@ h2, h3
 	img{
 		display: inline-block;
 	}
-
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
@@ -1607,8 +1617,8 @@ h2, h3
 
 	.module
 	{
-		border: 3px solid #eed0a8;
-		background: url("../images/blackboard.png") repeat scroll left top #343434;
+		/*border: 3px solid #eed0a8;
+		background: url("../images/blackboard.png") repeat scroll left top #343434;*/
 		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=90, Color=#000000)";/*IE 8*/
 		-moz-box-shadow: 0px 0px 2px #000000;/*FF 3.5+*/
 		-webkit-box-shadow: 0px 0px 2px #000000;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
@@ -1618,10 +1628,9 @@ h2, h3
 		div[class*="moduletable"]
 		{
 			color: #FFFFFF;
-
 			h3
 			{
-				ont-family: @headings-font-family;
+				font-family: @headings-font-family;
 				.fontsize(25);
 				color: @headings-color;
 				text-transform: uppercase;
@@ -1635,6 +1644,21 @@ h2, h3
 			> div
 			{
 				padding: 0px 15px;
+			}
+		}
+		.moduletable.border
+		{
+			h3
+			{
+				font-family: @headings-font-family;
+				.fontsize(25);
+				text-transform: uppercase;
+				border-top: 2px solid #605f5f;
+				color: #FFFFFF;
+				background: #d0b687;
+				text-align: left;
+				padding: 9px 0 9px 10px;
+				margin: 0px;
 			}
 		}
 	}
@@ -1653,12 +1677,17 @@ h2, h3
 				.fontsize(25);
 				color: @headings-color;
 				text-transform: uppercase;
-				border-bottom: 2px solid #FFFFFF;
+				border-bottom: 2px solid #605f5f;
 				color: #FFFFFF;
 				display: block;
-				padding: 9px 0px;
-				text-align: center;
+				padding: 9px 0 9px 10px;
+				text-align: left;
+				background: url("../images/Arrow-Carrot-Left-Alt-right.png") no-repeat scroll left 96.5% center #d0b687;
 			}
+			/*&.active a
+			{
+				background: url("../images/Arrow-Carrot-Left-Alt.png") no-repeat scroll left 96.5% center #d0b687;
+			}*/
 
 			ul
 			{
@@ -1674,14 +1703,14 @@ h2, h3
 						.fontsize(20);
 						display: block;
 						color: #666666;
-						border-bottom: 1px solid #555555;
-						padding: 4px 5px 3px 15px;
+						border-bottom: 2px solid #c2c2c2;
+						padding: 10px 5px 10px 10px;
 					}
 
 					&.active a{
-						color: #FFFFFF;
-						background: url("../images/arrowactive.png") no-repeat scroll 15px center transparent;
-						padding-left: 55px;
+						color: @headings-color ;
+						/*background: url("../images/arrowactive.png") no-repeat scroll 15px center transparent;*/
+						padding-left: 10px;
 					}
 				}
 			}
@@ -1719,7 +1748,9 @@ h2, h3
 	.btn-primary;
 	margin-bottom: 20px;
 	margin-top: 10px;
-	border: 2px solid @btn-primary-color;
+	border: 2px solid #FFF;
+	background-color: #b71a1d;
+	padding: 3px 15px;
 }
 
 #mod_compareproduct
@@ -1731,15 +1762,33 @@ h2, h3
 	td
 	{
 		padding-left: 0px;
-		color: #FFFFFF;
+		color: @headings-color;
 
 		a
 		{
-			color: #FFFFFF;
+			color: @headings-color
 		}
 	}
 }
-
+/*.select2-drop .select2-results:before{background-color: #287ab4; border-top: 3px solid #FFF;}*/
+.select2-drop 
+{
+	.select2-results
+	{
+		background-color: #287ab4;
+		background-image: url("../images/dropdown-menu-icon.png") no-repeat scroll top left;
+		&:before
+		{
+			border-top:3px solid #287ab4;
+		}
+	}
+	
+	.select2-result-label
+	{
+		background-color: #287ab4;
+		border-top:3px solid #287ab4;
+	}
+}
 #main-content, .contentpane
 {
 	#main
@@ -1773,7 +1822,7 @@ h2, h3
 	{
 		background: url("../images/arrowmenu.png") no-repeat scroll left center transparent;
 	}
-
+	
 	.search
 	{
 		.word
@@ -1866,7 +1915,7 @@ h2, h3
 			}
 		}
 	}
-
+	
 	input[type="submit"]
 	{
 		.btn;
@@ -3797,7 +3846,7 @@ button
 	font-family: @headings-font-family;
 	margin: 0px;
 	padding-left: 40px;
-	text-align: left;
+	text-align: right;
 	background: url("../images/wishlist.png") no-repeat scroll left top transparent;
 	line-height: 28px;
 
