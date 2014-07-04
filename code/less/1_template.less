@@ -382,18 +382,18 @@ h2, h3
 				{
 					padding-left: 15px;
 
-					&.active
+					&:active
 					{
-						background: url("../images/cart.png") no-repeat scroll center 8px @headings-color;
+						background: url("../images/dropdown-menu-icon.png") no-repeat scroll right bottom;
 						overflow: hidden;
 						display: block;
-						padding: 19px 60px;
+						padding: 0;
 						float: right;
 						cursor: pointer;
 
 						.mod_cart_image, .mod_cart_title
 						{
-							display: none;
+							display: block;
 						}
 
 					}
@@ -420,8 +420,8 @@ h2, h3
 					display: none;
 					z-index: 100;
 					width: 210%;
-					top: 38px;
-
+					top: 34px;
+					
 					.mod_cart_inner
 					{
 						border: 1px solid @headings-color;
@@ -1371,6 +1371,7 @@ h2, h3
 
 		.category_box_outside, .related_product_inside
 		{
+
 			.category_box_inside
 			{
 				position: relative;
@@ -1453,7 +1454,7 @@ h2, h3
 
 				.category_product_compare
 				{
-					float: left;
+					float: right;
 					background: url("../images/compare.png") no-repeat scroll left top transparent;
 					font-family: @headings-font-family;
 					.fontsize(18);
@@ -1486,6 +1487,8 @@ h2, h3
 						display: block;
 						width: 25px;
 						margin-top: 13px;
+						position: absolute;
+						left:0;
 					}
 				}
 
